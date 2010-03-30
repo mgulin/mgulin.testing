@@ -1,0 +1,14 @@
+Testing repository
+The idea behind this is to have an script to allow sync between one central git repository and several FTP sites where the deployed code is running.
+Due to low developing time this is going to be done in one and only one script: it will store the code and also the info about projects, branches
+and sites.
+
+You can have several projects to keep in sync, and every project will have one or several branches to keep track of. Every branch will have info about
+its FTP account (host, user and pass).
+The script will be in charge of periodically questioning the central git repo about the last commit on branches it manage. If the last commit on a
+branch it's newer than the last one uploaded through FTP the script will take care of uploading the new version.
+
+The script will run through cron at predefined intervals.
+
+Manuel A. Gulin
+
